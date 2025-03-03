@@ -3,8 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
-We used in this project 
-
+We used in this project
 -clean architecture
 - bloc => cubit State Management
 - dio => retrofit HTTP  Call
