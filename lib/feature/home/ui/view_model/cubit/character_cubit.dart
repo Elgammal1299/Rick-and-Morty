@@ -10,13 +10,15 @@ class CharacterCubit extends Cubit<CharacterState> {
 
   final CharactersRepository charactersRepository;
 
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchCharacter() async {
     emit(CharacterLoading());
     var result = await charactersRepository.getAllCharacters();
     result.fold((message) {
       emit(CharacterError(message));
     }, (characters) {
       emit(CharacterLoaded(characters));
+    
+      
     });
   }
 }

@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final AppRouter appRouter = AppRouter();
     return MaterialApp(
+      
+debugShowCheckedModeBanner: false,
       onGenerateRoute: appRouter.generateRoute,
       title: 'Rick and Morty',
       theme: ThemeData(
