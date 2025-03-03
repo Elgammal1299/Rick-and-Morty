@@ -4,9 +4,10 @@ A new Flutter project.
 
 ## Getting Started
 We used in this project
--clean architecture
+- clean architecture
 - bloc => cubit State Management
 - dio => retrofit HTTP  Call
+- dartz => Handling errors
 - json serializable
 - flutter_offline
 - Hero
