@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rickandmorty/core/api_services.dart';
 import 'package:rickandmorty/core/router/app_routes.dart';
-import 'package:rickandmorty/feature/home/data/model/characters.dart';
+import 'package:rickandmorty/feature/home/data/model/result.dart';
 import 'package:rickandmorty/feature/home/data/repo/repo.dart';
 import 'package:rickandmorty/feature/home/ui/view/characters_details_screen.dart';
 import 'package:rickandmorty/feature/home/ui/view/home_screen.dart';
@@ -29,16 +29,13 @@ class AppRouter {
         );
 
       case AppRoutes.charactersDetailsRoute:
-        // final character = settings.arguments as CharactersModel;
+         final character = settings.arguments as Result ;
         
-        return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (BuildContext context) =>
-                CharacterCubit(charactersRepository),
-            child: CharactersDetailsScreen(
-              // character: character,
+         return MaterialPageRoute(
+          builder: (_) => CharacterDetailsScreen(
+              character: character,
             ),
-          ),
+          
         );
         default:
         return null;

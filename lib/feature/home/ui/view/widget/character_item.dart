@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/constant/my_color.dart';
+import 'package:rickandmorty/core/router/app_routes.dart';
+import 'package:rickandmorty/core/router/route.dart';
 import 'package:rickandmorty/feature/home/data/model/result.dart';
 
 class CharacterItem extends StatelessWidget {
@@ -19,7 +21,7 @@ class CharacterItem extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          //Navigator.pushNamed(context, characterDetailsScreen , arguments: character),
+          Navigator.pushNamed(context, AppRoutes.charactersDetailsRoute , arguments: character);
         },
         child: GridTile(
           child: Hero(
